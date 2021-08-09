@@ -17,7 +17,7 @@ else:
             summa_procentov = summa_zaima * (procentnaya_stavka / 100) * 30 / 365
             summa_platega_v_mesyac = chast_osnovn_dolga + summa_procentov
             summa_oplati_credita.append(summa_platega_v_mesyac)
-            print(f"Сумма выплаты в {mes} месяц = {round(summa_platega_v_mesyac, 2)}")
+            print(f"Сумма выплаты : {mes} месяц = {round(summa_platega_v_mesyac)}")
             summa_zaima = summa_zaima - chast_osnovn_dolga
     else:
         summa_oplati_credita = []
@@ -27,9 +27,9 @@ else:
             summa_procentov = summa_zaima_minus_vznos * (procentnaya_stavka / 100) * 30 / 365
             summa_platega_v_mesyac = chast_osnovn_dolga_minus_vznos + summa_procentov
             summa_oplati_credita.append(summa_platega_v_mesyac)
-            print(f"Сумма выплаты в {mes} месяц = {round(summa_platega_v_mesyac, 2)}")
+            print(f"Сумма выплаты : {mes} месяц = {round(summa_platega_v_mesyac)}")
             summa_zaima_minus_vznos = summa_zaima_minus_vznos - chast_osnovn_dolga_minus_vznos
 
     summa_oplati = sum(summa_oplati_credita)
-    print(f"Сумма, которую вы выплатите за весь срок кредита = {round(summa_oplati, 2)}")
-    print(f"Сумма переплаты составит = {round(summa_oplati - summa_perv_zaima - perv_vznos, 2)}")
+    print(f"Сумма, которую вы выплатите за весь срок кредита = {round(summa_oplati)}")
+    print(f"Сумма переплаты составит = {round(summa_oplati - summa_perv_zaima - perv_vznos)}")
